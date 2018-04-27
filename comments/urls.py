@@ -3,5 +3,6 @@ from . import views
 
 app_name = 'comments'
 urlpatterns = [
-    url(r'^comment/post/(?P<post_pk>\w+)/$', views.post_comment, name='post_comment'),
+	url(r'^comment/post/(?P<post_pk>\w+)/$', views.PostCommentView.as_view(), name='post_comment'),
+    # url(r'^comment/post/(?P<post_pk>\w+)/$', views.post_comment, name='post_comment'),
 ]
