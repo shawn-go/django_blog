@@ -45,3 +45,6 @@ def deletePostDetail(pk):
 	# return post
 
 
+
+
+

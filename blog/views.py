@@ -4,6 +4,7 @@ from .models import Post, Tag, Category
 from .forms import PostForm
 from .httphelp import getPostList, getPostDetail, postPostDetail, putPostDetail, deletePostDetail
 import json
+from comments.forms import CommentForm
 
 # Create your views here.
 def post_list(request):
@@ -14,7 +15,21 @@ def post_list(request):
 def post_detail(request, pk):
     # post = get_object_or_404(Post, pk=pk)
 	post = getPostDetail(pk=pk)
-	return render(request, 'blog/post_detail.html', context={'post': post})
+	post_ob = Post(title=post['title'], abstract=post['abstract'], body=post['body'], author=post['author'], category=post['category'], pub_time=post['pub_time'], update_time=post['update_time'], pk=post['pk'])
+
+	# 记得在顶部导入 CommentForm
+	form = CommentForm()
+	# 获取这篇 post 下的全部评论
+    # comment_list = post.comment_set.all()
+	comment_list = post.get('comments')
+
+	# 将文章、表单、以及文章下的评论列表作为模板变量传给 detail.html 模板，以便渲染相应数据。
+	context	=	{'post': post,
+				'form': form,
+				'comment_list': comment_list
+				}
+	return render(request, 'blog/post_detail.html', context=context)
+	# return render(request, 'blog/post_detail.html', context={'post': post})
 
 def post_new(request):
 	if request.method == "POST":
