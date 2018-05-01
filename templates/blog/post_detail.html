@@ -9,7 +9,7 @@
                                                           datetime="{{ post.pub_time }}">{{ post.pub_time }}</time></a></span>
                 <span class="post-author"><a href="#">{{ post.author }}</a></span>
                 <span class="comments-link"><a href="#">{{ comment_list|length }} comments</a></span>
-                <span class="views-count"><a href="#">588 阅读</a></span>
+                <!-- <span class="views-count"><a href="#">555 閱讀</a></span> -->
                 <a class="btn btn-default" href="{% url 'blog:post_edit' pk=post.pk %}"><span class="glyphicon glyphicon-pencil"></span></a>
                 <a class="btn btn-default" href="{% url 'blog:post_delete' pk=post.pk %}"><span class="glyphicon glyphicon-remove"></span></a>
             </div>
@@ -72,22 +72,22 @@
 {% endblock main %}
 {% block toc %}
     <div class="widget widget-content">
-        <h3 class="widget-title">文章目录</h3>
+        <h3 class="widget-title">文章目錄</h3>
         <ul>
             <li>
-                <a href="#">教程特点</a>
+                <a href="#">課程特點</a>
             </li>
-            <li>
+            <!-- <li>
                 <a href="#">谁适合这个教程</a>
+            </li> -->
+            <li>
+                <a href="#">線上預覽</a>
             </li>
             <li>
-                <a href="#">在线预览</a>
+                <a href="#">資源列表</a>
             </li>
             <li>
-                <a href="#">资源列表</a>
-            </li>
-            <li>
-                <a href="#">获取帮助</a>
+                <a href="#">獲取幫助</a>
             </li>
         </ul>
     </div>
