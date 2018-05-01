@@ -1,5 +1,5 @@
 # django_blog
-Access mongodb through the flask service (restful api)
+Blog website and get data from mongodb by flask service (restful api)
 
 ## Environment
 Python Version: 3.6.5
