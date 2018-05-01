@@ -2,7 +2,7 @@
 Blog website and get data from mongodb by flask service (restful api)
 
 ## Environment
-Python Version: 3.6.5
+Python Version: 3.6.5<br/>
 Deployed Cloud Server: Google App Engine
 
 ## Models
