@@ -1,6 +1,7 @@
 # django_blog
 Access mongodb through the flask service (restful api)
 
+## Environment
 Python Version: 3.6.5
 Deployed Cloud Server: Google App Engine
 
