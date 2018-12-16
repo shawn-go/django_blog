@@ -3,7 +3,8 @@ Blog website and get data from mongodb by flask service (restful api)
 
 ## Environment
 Python Version: 3.6.5<br/>
-Deployed Cloud Server: Google App Engine
+Django version: 2.0.4<br/>
+Deployment: GAE (Google App Engine)
 
 ## Models
 * Post
@@ -22,5 +23,8 @@ Deployed Cloud Server: Google App Engine
   * created_time(評論時間;auto)
 
 ## Class-Based Views
-* 支援增刪改查Post
-* 支援建立顯示Comment
+* Support CRUD for post(s) -> PostView(ListView), PostDetailView(DetailView), PostNewView(FormView), PostEditView(FormView), PostDeleteView(RedirectView)
+* Support CR for comment(s) -> PostCommentView(ProcessFormView)
+
+## Access mongodb through flask service restful api
+* httphelp.py
